@@ -42,6 +42,7 @@
             lblQuestion.Size = new Size(682, 164);
             lblQuestion.TabIndex = 0;
             lblQuestion.Text = "label1";
+            lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -49,6 +50,7 @@
             button1.Name = "button1";
             button1.Size = new Size(243, 82);
             button1.TabIndex = 1;
+            button1.Tag = "1";
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += CheckAnswer;
@@ -59,6 +61,7 @@
             button2.Name = "button2";
             button2.Size = new Size(228, 82);
             button2.TabIndex = 2;
+            button2.Tag = "2";
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
             button2.Click += CheckAnswer;
@@ -69,6 +72,7 @@
             button3.Name = "button3";
             button3.Size = new Size(243, 78);
             button3.TabIndex = 3;
+            button3.Tag = "3";
             button3.Text = "button3";
             button3.UseVisualStyleBackColor = true;
             button3.Click += CheckAnswer;
@@ -79,6 +83,7 @@
             button4.Name = "button4";
             button4.Size = new Size(228, 78);
             button4.TabIndex = 4;
+            button4.Tag = "4";
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = true;
             button4.Click += CheckAnswer;
@@ -94,7 +99,7 @@
             Controls.Add(button1);
             Controls.Add(lblQuestion);
             Name = "Form1";
-            Text = "Form1";
+            Text = "QuizExpert";
             ResumeLayout(false);
         }
 
