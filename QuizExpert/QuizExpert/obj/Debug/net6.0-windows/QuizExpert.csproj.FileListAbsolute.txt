@@ -15,3 +15,6 @@ C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\obj\Debug\net6.
 C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\obj\Debug\net6.0-windows\QuizExpert.pdb
 C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\obj\Debug\net6.0-windows\QuizExpert.genruntimeconfig.cache
 C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\obj\Debug\net6.0-windows\ref\QuizExpert.dll
+C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\bin\Debug\net6.0-windows\Sounds\SoundForCorrectAnswer.wav
+C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\bin\Debug\net6.0-windows\Sounds\SoundForIncorrectAnswer.wav
+C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\obj\Debug\net6.0-windows\QuizExpert.Properties.Resources.resources

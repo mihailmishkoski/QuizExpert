@@ -1,3 +1,5 @@
+using System.Media;
+
 namespace QuizExpert
 {
     public partial class Form1 : Form
@@ -47,6 +49,14 @@ namespace QuizExpert
                 if (button.Text == correctAnswer)
                 {
                     NumberOfCorrectAnswers++;
+                    lblResult.Text = NumberOfCorrectAnswers + "/10";
+                    playCorrectSound();
+                    BlinkLabelGreen();
+                }
+                else
+                {
+                    playIncorrectSound();
+                    BlinkLabelRed();
                 }
             }
             if (NumberOfQuestions == 10)
@@ -57,7 +67,7 @@ namespace QuizExpert
         }
         private void GameOver()
         {
-            DialogResult result = MessageBox.Show("Igrata zavrshi, imate " + NumberOfCorrectAnswers + " tocni odgovori", "Dali sakate nova igra?", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Imate " + NumberOfCorrectAnswers + " tocni odgovori. Dali sakate nova igra?", "Igrata zavrshi", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 PlayAgain();
@@ -72,8 +82,37 @@ namespace QuizExpert
             newquestion = new Questions();
             NumberOfQuestions = 0;
             NumberOfCorrectAnswers = 0;
+            lblResult.Text = "0/10";
             GenerateNewQuestion();
         }
+        public void playCorrectSound()
+        {
+            string path = Path.Combine(Environment.CurrentDirectory, "Sounds", "SoundForCorrectAnswer.wav");
+            SoundPlayer player = new SoundPlayer(path);
+            player.Play();
+        }
+        public void playIncorrectSound()
+        {
+            string path = Path.Combine(Environment.CurrentDirectory, "Sounds", "SoundForIncorrectAnswer.wav");
+            SoundPlayer player = new SoundPlayer(path);
+            player.Play();
+
+        }
+        private async void BlinkLabelGreen()
+        {
+            lblResult.BackColor = Color.LightGreen;
+            await Task.Delay(500);
+            lblResult.BackColor = SystemColors.Control;
+        }
+        private async void BlinkLabelRed()
+        {
+            lblResult.BackColor = Color.Red;
+            await Task.Delay(500);
+            lblResult.BackColor = SystemColors.Control;
+        }
+           
+     
+
 
     }
 }
