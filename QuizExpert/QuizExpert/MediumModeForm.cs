@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace QuizExpert
 {
-    public partial class Form3 : Form
+    public partial class MediumModeForm : Form
     {
         public int NumberOfQuestions { get; set; } = 0;
         public int NumberOfCorrectAnswers { get; set; } = 0;
         public string correctAnswer { get; set; }
-        private int sec = 15;
+        private int sec = 30;
         Questions newquestion = new Questions();
-        public Form3()
+        public MediumModeForm()
         {
             InitializeComponent();
             GenerateNewQuestion();
@@ -82,13 +82,12 @@ namespace QuizExpert
             if (result == DialogResult.Yes)
             {
                 PlayAgain();
-                Form forma2 = new Form2();
-                forma2.ShowDialog();
-
             }
             else
             {
                 this.Close();
+                Form1 form1 = new Form1();
+                form1.ShowDialog();
             }
 
         }
@@ -99,7 +98,10 @@ namespace QuizExpert
             NumberOfQuestions = 0;
             NumberOfCorrectAnswers = 0;
             lblResult.Text = "0/10";
+            sec = 30;
+            lbTimer.Text = sec.ToString();
             GenerateNewQuestion();
+            Timer2.Start();
         }
         public void playCorrectSound()
         {

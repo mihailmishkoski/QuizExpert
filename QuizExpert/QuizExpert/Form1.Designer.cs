@@ -3,12 +3,12 @@
     partial class Form1
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,137 +23,69 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            lblQuestion = new Label();
+            label1 = new Label();
             button1 = new Button();
             button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            lblResult = new Label();
-            timerLabel = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
-            // lblQuestion
+            // label1
             // 
-            lblQuestion.BackColor = Color.LightSteelBlue;
-            lblQuestion.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblQuestion.Location = new Point(70, 96);
-            lblQuestion.Name = "lblQuestion";
-            lblQuestion.Size = new Size(656, 110);
-            lblQuestion.TabIndex = 0;
-            lblQuestion.Text = "label1";
-            lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(103, 76);
+            label1.Name = "label1";
+            label1.Size = new Size(256, 32);
+            label1.TabIndex = 0;
+            label1.Text = "Изберете game mode";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
-            button1.BackColor = Color.LightSkyBlue;
-            button1.Location = new Point(136, 259);
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(159, 175);
             button1.Name = "button1";
-            button1.Size = new Size(243, 82);
+            button1.Size = new Size(143, 45);
             button1.TabIndex = 1;
-            button1.Tag = "1";
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += CheckAnswer;
+            button1.Text = "Easy";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.BackColor = Color.LightSkyBlue;
-            button2.Location = new Point(411, 259);
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(159, 253);
             button2.Name = "button2";
-            button2.Size = new Size(228, 82);
+            button2.Size = new Size(143, 45);
             button2.TabIndex = 2;
-            button2.Tag = "2";
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += CheckAnswer;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.LightSkyBlue;
-            button3.Location = new Point(136, 347);
-            button3.Name = "button3";
-            button3.Size = new Size(243, 78);
-            button3.TabIndex = 3;
-            button3.Tag = "3";
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += CheckAnswer;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.LightSkyBlue;
-            button4.Location = new Point(411, 347);
-            button4.Name = "button4";
-            button4.Size = new Size(228, 78);
-            button4.TabIndex = 4;
-            button4.Tag = "4";
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += CheckAnswer;
-            // 
-            // lblResult
-            // 
-            lblResult.BackColor = Color.White;
-            lblResult.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
-            lblResult.ForeColor = SystemColors.ActiveCaptionText;
-            lblResult.Location = new Point(341, 9);
-            lblResult.Name = "lblResult";
-            lblResult.Size = new Size(116, 73);
-            lblResult.TabIndex = 5;
-            lblResult.Text = "0/10";
-            lblResult.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // timerLabel
-            // 
-            timerLabel.AutoSize = true;
-            timerLabel.BackColor = Color.Azure;
-            timerLabel.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            timerLabel.Location = new Point(718, 27);
-            timerLabel.Name = "timerLabel";
-            timerLabel.Size = new Size(28, 35);
-            timerLabel.TabIndex = 6;
-            timerLabel.Text = "0";
-            // 
-            // timer1
-            // 
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
+            button2.Text = "Medium";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(800, 450);
-            Controls.Add(timerLabel);
-            Controls.Add(lblResult);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(486, 437);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(lblQuestion);
-            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Controls.Add(label1);
             Name = "Form1";
-            Text = "QuizExpert - Easy Mode";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Game Mode";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        public System.Windows.Forms.Timer timer1;
-        public Label lblQuestion;
-        public Button button1;
-        public Button button2;
-        public Button button3;
-        public Button button4;
-        public Label lblResult;
-        public Label timerLabel;
+
+        private Label label1;
+        private Button button1;
+        private Button button2;
     }
 }

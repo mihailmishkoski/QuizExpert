@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="SoundForCorrectAnswer.wav" />
+    <None Remove="Sounds\Outlaws.mp3" />
     <None Remove="Sounds\SoundForCorrectAnswer.wav" />
     <None Remove="Sounds\SoundForIncorrectAnswer.wav" />
   </ItemGroup>

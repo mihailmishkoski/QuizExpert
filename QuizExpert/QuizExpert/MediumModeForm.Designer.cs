@@ -1,6 +1,6 @@
 ﻿namespace QuizExpert
 {
-    partial class Form3
+    partial class MediumModeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,6 @@
             button2 = new Button();
             button1 = new Button();
             lblQuestion = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
             Timer2 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
@@ -56,7 +55,7 @@
             lblResult.BackColor = Color.White;
             lblResult.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
             lblResult.ForeColor = SystemColors.ActiveCaptionText;
-            lblResult.Location = new Point(333, 17);
+            lblResult.Location = new Point(341, 9);
             lblResult.Name = "lblResult";
             lblResult.Size = new Size(116, 73);
             lblResult.TabIndex = 12;
@@ -66,7 +65,7 @@
             // button4
             // 
             button4.BackColor = Color.LightSkyBlue;
-            button4.Location = new Point(403, 355);
+            button4.Location = new Point(411, 347);
             button4.Name = "button4";
             button4.Size = new Size(228, 78);
             button4.TabIndex = 11;
@@ -78,7 +77,7 @@
             // button3
             // 
             button3.BackColor = Color.LightSkyBlue;
-            button3.Location = new Point(128, 355);
+            button3.Location = new Point(136, 347);
             button3.Name = "button3";
             button3.Size = new Size(243, 78);
             button3.TabIndex = 10;
@@ -90,7 +89,7 @@
             // button2
             // 
             button2.BackColor = Color.LightSkyBlue;
-            button2.Location = new Point(403, 267);
+            button2.Location = new Point(411, 259);
             button2.Name = "button2";
             button2.Size = new Size(228, 82);
             button2.TabIndex = 9;
@@ -102,7 +101,7 @@
             // button1
             // 
             button1.BackColor = Color.LightSkyBlue;
-            button1.Location = new Point(128, 267);
+            button1.Location = new Point(136, 259);
             button1.Name = "button1";
             button1.Size = new Size(243, 82);
             button1.TabIndex = 8;
@@ -115,16 +114,12 @@
             // 
             lblQuestion.BackColor = Color.LightSteelBlue;
             lblQuestion.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblQuestion.Location = new Point(62, 104);
+            lblQuestion.Location = new Point(70, 96);
             lblQuestion.Name = "lblQuestion";
             lblQuestion.Size = new Size(656, 110);
             lblQuestion.TabIndex = 7;
             lblQuestion.Text = "label1";
             lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // timer1
-            // 
-            timer1.Interval = 1000;
             // 
             // Timer2
             // 
@@ -132,7 +127,7 @@
             Timer2.Interval = 1000;
             Timer2.Tick += Timer2_Tick_1;
             // 
-            // Form3
+            // MediumModeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -145,7 +140,8 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(lblQuestion);
-            Name = "Form3";
+            Name = "MediumModeForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "QuizExpert - Hard Mode";
             ResumeLayout(false);
             PerformLayout();
@@ -160,7 +156,6 @@
         public Button button2;
         public Button button1;
         public Label lblQuestion;
-        public System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Timer Timer2;
     }
 }
