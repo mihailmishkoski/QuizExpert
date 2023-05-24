@@ -46,9 +46,9 @@
             lbTimer.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             lbTimer.Location = new Point(710, 35);
             lbTimer.Name = "lbTimer";
-            lbTimer.Size = new Size(28, 35);
+            lbTimer.Size = new Size(52, 35);
             lbTimer.TabIndex = 13;
-            lbTimer.Text = "0";
+            lbTimer.Text = "30s";
             // 
             // lblResult
             // 

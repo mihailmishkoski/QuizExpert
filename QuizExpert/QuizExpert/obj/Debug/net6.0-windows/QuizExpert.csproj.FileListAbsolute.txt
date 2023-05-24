@@ -42,3 +42,7 @@ C:\Users\damch\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\obj\Debug\net6.
 C:\Users\damch\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\obj\Debug\net6.0-windows\QuizExpert.Form3.resources
 C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\obj\Debug\net6.0-windows\QuizExpert.EasyModeForm.resources
 C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\obj\Debug\net6.0-windows\QuizExpert.MediumModeForm.resources
+C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\bin\Debug\net6.0-windows\Sounds\Outlaws Soundtrack - Outlaws.wav
+C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\bin\Debug\net6.0-windows\Sounds\clickSound.wav
+C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\bin\Debug\net6.0-windows\Sounds\Menu Tick⧸Hover (Terraria Sound) - Sound Effect for editing.wav
+C:\Users\misko\OneDrive\Desktop\QuizExpert\QuizExpert\QuizExpert\obj\Debug\net6.0-windows\QuizExpert.GameOverForm.resources

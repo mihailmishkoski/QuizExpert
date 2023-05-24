@@ -31,13 +31,14 @@
             label1 = new Label();
             button1 = new Button();
             button2 = new Button();
+            helpProvider1 = new HelpProvider();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(103, 76);
+            label1.Location = new Point(112, 65);
             label1.Name = "label1";
             label1.Size = new Size(256, 32);
             label1.TabIndex = 0;
@@ -47,24 +48,26 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(159, 175);
+            button1.Location = new Point(168, 164);
             button1.Name = "button1";
             button1.Size = new Size(143, 45);
             button1.TabIndex = 1;
             button1.Text = "Easy";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            button1.MouseEnter += playHoverSound;
             // 
             // button2
             // 
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(159, 253);
+            button2.Location = new Point(168, 243);
             button2.Name = "button2";
             button2.Size = new Size(143, 45);
             button2.TabIndex = 2;
             button2.Text = "Medium";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+            button2.MouseEnter += playHoverSound;
             // 
             // Form1
             // 
@@ -75,6 +78,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
+            HelpButton = true;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Game Mode";
@@ -87,5 +91,6 @@
         private Label label1;
         private Button button1;
         private Button button2;
+        private HelpProvider helpProvider1;
     }
 }

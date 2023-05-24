@@ -69,21 +69,24 @@ namespace QuizExpert
         }
         private void GameOver()
         {
-            DialogResult result = MessageBox.Show("Imate " + NumberOfCorrectAnswers + " tocni odgovori. Dali sakate nova igra?", "Igrata zavrshi", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
+            GameOver gameover = new GameOver(NumberOfCorrectAnswers,NumberOfQuestions,"Easy");
+            gameover.SendResult();
+            this.Close();
+            //DialogResult result = MessageBox.Show("Imate " + NumberOfCorrectAnswers + " tocni odgovori. Dali sakate nova igra?", "Igrata zavrshi", MessageBoxButtons.YesNo);
+            //if (result == DialogResult.Yes)
+            //{
 
-                PlayAgain();
-            }
-            else
-            {
-                this.Close();
-                Form1 form1 = new Form1();
-                form1.ShowDialog();
-            }
+            //    PlayAgain();
+            //}
+            //else
+            //{
+            //    this.Close();
+            //    Form1 form1 = new Form1();
+            //    form1.ShowDialog();
+            //}
 
         }
-        private void PlayAgain()
+        public void PlayAgain()
         {
 
             newquestion = new Questions();

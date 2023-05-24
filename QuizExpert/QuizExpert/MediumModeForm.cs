@@ -78,17 +78,20 @@ namespace QuizExpert
         }
         private void GameOver()
         {
-            DialogResult result = MessageBox.Show("Imate " + NumberOfCorrectAnswers + " tocni odgovori. Dali sakate nova igra?", "Igrata zavrshi", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                PlayAgain();
-            }
-            else
-            {
-                this.Close();
-                Form1 form1 = new Form1();
-                form1.ShowDialog();
-            }
+            GameOver gameover = new GameOver(NumberOfCorrectAnswers, NumberOfQuestions,"Medium");
+            gameover.SendResult();
+            this.Close();
+            //DialogResult result = MessageBox.Show("Imate " + NumberOfCorrectAnswers + " tocni odgovori. Dali sakate nova igra?", "Igrata zavrshi", MessageBoxButtons.YesNo);
+            //if (result == DialogResult.Yes)
+            //{
+            //    PlayAgain();
+            //}
+            //else
+            //{
+            //    this.Close();
+            //    Form1 form1 = new Form1();
+            //    form1.ShowDialog();
+            //}
 
         }
         private void PlayAgain()
@@ -99,7 +102,7 @@ namespace QuizExpert
             NumberOfCorrectAnswers = 0;
             lblResult.Text = "0/10";
             sec = 30;
-            lbTimer.Text = sec.ToString();
+            lbTimer.Text = sec.ToString()+"s";
             GenerateNewQuestion();
             Timer2.Start();
         }
@@ -147,7 +150,7 @@ namespace QuizExpert
 
         private void Timer2_Tick_1(object sender, EventArgs e)
         {
-            lbTimer.Text = (sec--).ToString();
+            lbTimer.Text = (sec--).ToString()+"s";
             if (sec < 10)
             {
                 BlinkLabelRed();

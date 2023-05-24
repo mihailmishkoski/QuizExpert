@@ -10,12 +10,24 @@
 
   <ItemGroup>
     <None Remove="SoundForCorrectAnswer.wav" />
+    <None Remove="Sounds\clickSound.wav" />
+    <None Remove="Sounds\Menu Tick⧸Hover %28Terraria Sound%29 - Sound Effect for editing.wav" />
+    <None Remove="Sounds\Outlaws Soundtrack - Outlaws.wav" />
     <None Remove="Sounds\Outlaws.mp3" />
     <None Remove="Sounds\SoundForCorrectAnswer.wav" />
     <None Remove="Sounds\SoundForIncorrectAnswer.wav" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Sounds\clickSound.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\Menu Tick⧸Hover (Terraria Sound) - Sound Effect for editing.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\Outlaws Soundtrack - Outlaws.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Sounds\SoundForCorrectAnswer.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
