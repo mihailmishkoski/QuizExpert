@@ -1,24 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Media;
-
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 namespace QuizExpert
 {
-    public partial class Form1 : Form
+    public partial class Form3 : Form
     {
         public int NumberOfQuestions { get; set; } = 0;
         public int NumberOfCorrectAnswers { get; set; } = 0;
         public string correctAnswer { get; set; }
-        public int seconds = 30;
+        private int sec = 15;
         Questions newquestion = new Questions();
-
-        public Form1()
+        public Form3()
         {
             InitializeComponent();
             GenerateNewQuestion();
-            timer1.Start();
-
-
+            Timer2.Start();
         }
-
         private string GenerateNewQuestion()
         {
             string q = newquestion.GenerateQuestion();
@@ -60,11 +65,13 @@ namespace QuizExpert
                 {
                     playIncorrectSound();
                     BlinkLabelRed();
+                    TimerBlinkRed();
+                    sec -= 1;
                 }
             }
             if (NumberOfQuestions == 10)
             {
-                timer1.Stop();
+                Timer2.Stop();
                 GameOver();
             }
             GenerateNewQuestion();
@@ -74,7 +81,6 @@ namespace QuizExpert
             DialogResult result = MessageBox.Show("Imate " + NumberOfCorrectAnswers + " tocni odgovori. Dali sakate nova igra?", "Igrata zavrshi", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-
                 PlayAgain();
                 Form forma2 = new Form2();
                 forma2.ShowDialog();
@@ -120,15 +126,34 @@ namespace QuizExpert
             await Task.Delay(500);
             lblResult.BackColor = SystemColors.Control;
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        private async void TimerBlinkRed()
         {
-            timerLabel.Text = (seconds--).ToString();
-            if (seconds <= -1)
+            lbTimer.BackColor = Color.Red;
+            await Task.Delay(100);
+            lbTimer.BackColor = SystemColors.Control;
+        }
+        /*private void Timer2_Tick(object sender, EventArgs e)
+        {
+            lbTimer.Text = (sec--).ToString();
+            if (sec <= -1)
             {
-                timer1.Stop();
+                Timer2.Stop();
                 GameOver();
 
+            }
+        }*/
+
+        private void Timer2_Tick_1(object sender, EventArgs e)
+        {
+            lbTimer.Text = (sec--).ToString();
+            if (sec < 10)
+            {
+                BlinkLabelRed();
+            }
+            if (sec <= -1)
+            {
+                Timer2.Stop();
+                GameOver();
             }
         }
     }

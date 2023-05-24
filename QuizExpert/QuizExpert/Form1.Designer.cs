@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblQuestion = new Label();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             lblResult = new Label();
+            timerLabel = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // lblQuestion
@@ -107,12 +110,29 @@
             lblResult.Text = "0/10";
             lblResult.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // timerLabel
+            // 
+            timerLabel.AutoSize = true;
+            timerLabel.BackColor = Color.Azure;
+            timerLabel.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            timerLabel.Location = new Point(718, 27);
+            timerLabel.Name = "timerLabel";
+            timerLabel.Size = new Size(28, 35);
+            timerLabel.TabIndex = 6;
+            timerLabel.Text = "0";
+            // 
+            // timer1
+            // 
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(timerLabel);
             Controls.Add(lblResult);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -121,17 +141,19 @@
             Controls.Add(lblQuestion);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "Form1";
-            Text = "QuizExpert";
+            Text = "QuizExpert - Easy Mode";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Label lblQuestion;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Label lblResult;
+        public System.Windows.Forms.Timer timer1;
+        public Label lblQuestion;
+        public Button button1;
+        public Button button2;
+        public Button button3;
+        public Button button4;
+        public Label lblResult;
+        public Label timerLabel;
     }
 }
