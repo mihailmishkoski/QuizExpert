@@ -37,9 +37,9 @@
             // lblFinalResult
             // 
             lblFinalResult.Font = new Font("Arial", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFinalResult.Location = new Point(34, 21);
+            lblFinalResult.Location = new Point(39, 28);
             lblFinalResult.Name = "lblFinalResult";
-            lblFinalResult.Size = new Size(376, 82);
+            lblFinalResult.Size = new Size(430, 109);
             lblFinalResult.TabIndex = 1;
             lblFinalResult.Text = "label1";
             lblFinalResult.TextAlign = ContentAlignment.MiddleCenter;
@@ -47,45 +47,46 @@
             // label1
             // 
             label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(34, 174);
+            label1.Location = new Point(39, 232);
             label1.Name = "label1";
-            label1.Size = new Size(274, 43);
+            label1.Size = new Size(313, 57);
             label1.TabIndex = 2;
-            label1.Text = "Play again ?";
+            label1.Text = "Нова игра ?";
             // 
             // btnYes
             // 
-            btnYes.Location = new Point(194, 166);
+            btnYes.Location = new Point(222, 221);
+            btnYes.Margin = new Padding(3, 4, 3, 4);
             btnYes.Name = "btnYes";
-            btnYes.Size = new Size(96, 51);
+            btnYes.Size = new Size(110, 68);
             btnYes.TabIndex = 3;
-            btnYes.Text = "Yes";
+            btnYes.Text = "Да";
             btnYes.UseVisualStyleBackColor = true;
             btnYes.Click += btnYes_Click;
             // 
             // btnNo
             // 
-            btnNo.Location = new Point(296, 166);
+            btnNo.Location = new Point(338, 221);
+            btnNo.Margin = new Padding(3, 4, 3, 4);
             btnNo.Name = "btnNo";
-            btnNo.Size = new Size(96, 51);
+            btnNo.Size = new Size(110, 68);
             btnNo.TabIndex = 4;
-            btnNo.Text = "No";
+            btnNo.Text = "Не";
             btnNo.UseVisualStyleBackColor = true;
             btnNo.Click += btnNo_Click;
             // 
             // GameOverForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(440, 273);
+            ClientSize = new Size(503, 364);
             Controls.Add(btnNo);
             Controls.Add(btnYes);
             Controls.Add(label1);
             Controls.Add(lblFinalResult);
-            Margin = new Padding(3, 2, 3, 2);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "GameOverForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "GameOverForm";
             ResumeLayout(false);
         }
 

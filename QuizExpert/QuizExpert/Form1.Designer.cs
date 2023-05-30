@@ -32,17 +32,17 @@
             button1 = new Button();
             button2 = new Button();
             helpProvider1 = new HelpProvider();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(112, 65);
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(109, 49);
             label1.Name = "label1";
-            label1.Size = new Size(256, 32);
+            label1.Size = new Size(256, 50);
             label1.TabIndex = 0;
-            label1.Text = "Изберете game mode";
+            label1.Text = "QuizExpert";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
@@ -52,7 +52,7 @@
             button1.Name = "button1";
             button1.Size = new Size(143, 45);
             button1.TabIndex = 1;
-            button1.Text = "Easy";
+            button1.Text = "Лесно";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             button1.MouseEnter += playHoverSound;
@@ -64,10 +64,21 @@
             button2.Name = "button2";
             button2.Size = new Size(143, 45);
             button2.TabIndex = 2;
-            button2.Text = "Medium";
+            button2.Text = "Средно";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             button2.MouseEnter += playHoverSound;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Location = new Point(168, 316);
+            button3.Name = "button3";
+            button3.Size = new Size(143, 45);
+            button3.TabIndex = 3;
+            button3.Text = "Тешко";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // Form1
             // 
@@ -75,15 +86,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(486, 437);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             HelpButton = true;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Game Mode";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -92,5 +103,6 @@
         private Button button1;
         private Button button2;
         private HelpProvider helpProvider1;
+        private Button button3;
     }
 }

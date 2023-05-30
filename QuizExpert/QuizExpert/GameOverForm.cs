@@ -26,19 +26,25 @@ namespace QuizExpert
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            if(gameMode=="Easy")
+            if (gameMode == "Easy")
             {
                 EasyModeForm form = new EasyModeForm();
                 form.Show();
                 this.Close();
             }
-            else
+            else if(gameMode == "Medium")
             {
                 MediumModeForm form = new MediumModeForm();
                 form.Show();
                 this.Close();
             }
-            
+            else
+            {
+                HardModeForm form = new HardModeForm();
+                form.Show();
+                this.Close();
+            }
+
         }
 
         private void btnNo_Click(object sender, EventArgs e)

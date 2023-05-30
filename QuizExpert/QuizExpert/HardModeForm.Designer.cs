@@ -1,6 +1,6 @@
 ﻿namespace QuizExpert
 {
-    partial class MediumModeForm
+    partial class HardModeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@
             button2 = new Button();
             button1 = new Button();
             lblQuestion = new Label();
-            Timer2 = new System.Windows.Forms.Timer(components);
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // lbTimer
@@ -44,31 +44,31 @@
             lbTimer.AutoSize = true;
             lbTimer.BackColor = Color.Azure;
             lbTimer.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            lbTimer.Location = new Point(710, 35);
+            lbTimer.Location = new Point(710, 36);
             lbTimer.Name = "lbTimer";
             lbTimer.Size = new Size(52, 35);
-            lbTimer.TabIndex = 13;
-            lbTimer.Text = "30s";
+            lbTimer.TabIndex = 20;
+            lbTimer.Text = "15s";
             // 
             // lblResult
             // 
             lblResult.BackColor = Color.White;
             lblResult.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
             lblResult.ForeColor = SystemColors.ActiveCaptionText;
-            lblResult.Location = new Point(341, 9);
+            lblResult.Location = new Point(341, 10);
             lblResult.Name = "lblResult";
             lblResult.Size = new Size(116, 73);
-            lblResult.TabIndex = 12;
+            lblResult.TabIndex = 19;
             lblResult.Text = "0/10";
             lblResult.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button4
             // 
             button4.BackColor = Color.LightSkyBlue;
-            button4.Location = new Point(411, 347);
+            button4.Location = new Point(411, 348);
             button4.Name = "button4";
             button4.Size = new Size(228, 78);
-            button4.TabIndex = 11;
+            button4.TabIndex = 18;
             button4.Tag = "4";
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = false;
@@ -77,10 +77,10 @@
             // button3
             // 
             button3.BackColor = Color.LightSkyBlue;
-            button3.Location = new Point(136, 347);
+            button3.Location = new Point(136, 348);
             button3.Name = "button3";
             button3.Size = new Size(243, 78);
-            button3.TabIndex = 10;
+            button3.TabIndex = 17;
             button3.Tag = "3";
             button3.Text = "button3";
             button3.UseVisualStyleBackColor = false;
@@ -89,10 +89,10 @@
             // button2
             // 
             button2.BackColor = Color.LightSkyBlue;
-            button2.Location = new Point(411, 259);
+            button2.Location = new Point(411, 260);
             button2.Name = "button2";
             button2.Size = new Size(228, 82);
-            button2.TabIndex = 9;
+            button2.TabIndex = 16;
             button2.Tag = "2";
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = false;
@@ -101,10 +101,10 @@
             // button1
             // 
             button1.BackColor = Color.LightSkyBlue;
-            button1.Location = new Point(136, 259);
+            button1.Location = new Point(136, 260);
             button1.Name = "button1";
             button1.Size = new Size(243, 82);
-            button1.TabIndex = 8;
+            button1.TabIndex = 15;
             button1.Tag = "1";
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = false;
@@ -114,20 +114,19 @@
             // 
             lblQuestion.BackColor = Color.LightSteelBlue;
             lblQuestion.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblQuestion.Location = new Point(70, 96);
+            lblQuestion.Location = new Point(70, 97);
             lblQuestion.Name = "lblQuestion";
             lblQuestion.Size = new Size(656, 110);
-            lblQuestion.TabIndex = 7;
+            lblQuestion.TabIndex = 14;
             lblQuestion.Text = "label1";
             lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Timer2
+            // timer1
             // 
-            Timer2.Enabled = true;
-            Timer2.Interval = 1000;
-            Timer2.Tick += Timer2_Tick_1;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick_1;
             // 
-            // MediumModeForm
+            // HardModeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -141,7 +140,7 @@
             Controls.Add(button1);
             Controls.Add(lblQuestion);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "MediumModeForm";
+            Name = "HardModeForm";
             StartPosition = FormStartPosition.CenterScreen;
             ResumeLayout(false);
             PerformLayout();
@@ -156,6 +155,6 @@
         public Button button2;
         public Button button1;
         public Label lblQuestion;
-        public System.Windows.Forms.Timer Timer2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

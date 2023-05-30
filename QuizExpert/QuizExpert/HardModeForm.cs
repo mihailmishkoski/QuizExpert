@@ -1,22 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Media;
-
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 namespace QuizExpert
 {
-    public partial class EasyModeForm : Form
+    public partial class HardModeForm : Form
     {
         public int NumberOfQuestions { get; set; } = 0;
         public int NumberOfCorrectAnswers { get; set; } = 0;
         public string correctAnswer { get; set; }
-        public int seconds = 30;
+        private int sec = 15;
         Questions newquestion = new Questions();
-
-        public EasyModeForm()
+        public HardModeForm()
         {
             InitializeComponent();
             GenerateNewQuestion();
             timer1.Start();
         }
-
         private string GenerateNewQuestion()
         {
             string q = newquestion.GenerateQuestion();
@@ -53,11 +60,20 @@ namespace QuizExpert
                     lblResult.Text = NumberOfCorrectAnswers + "/10";
                     playCorrectSound();
                     BlinkLabelGreen();
+                    sec += 3;
                 }
                 else
                 {
+                    if (NumberOfCorrectAnswers > 0)
+                    {
+                        NumberOfCorrectAnswers--;
+                    }
+                    lblResult.Text = NumberOfCorrectAnswers + "/10";
                     playIncorrectSound();
                     BlinkLabelRed();
+                    TimerBlinkRed();
+                    sec -= 3;
+
                 }
             }
             if (NumberOfQuestions == 10)
@@ -69,18 +85,21 @@ namespace QuizExpert
         }
         private void GameOver()
         {
-            GameOver gameover = new GameOver(NumberOfCorrectAnswers, NumberOfQuestions, "Easy");
+            GameOver gameover = new GameOver(NumberOfCorrectAnswers, NumberOfQuestions, "Hard");
             gameover.SendResult();
             this.Close();
         }
-        public void PlayAgain()
+        private void PlayAgain()
         {
 
             newquestion = new Questions();
             NumberOfQuestions = 0;
             NumberOfCorrectAnswers = 0;
             lblResult.Text = "0/10";
+            sec = 15;
+            lbTimer.Text = sec.ToString() + "s";
             GenerateNewQuestion();
+            timer1.Start();
         }
         public void playCorrectSound()
         {
@@ -106,6 +125,27 @@ namespace QuizExpert
             lblResult.BackColor = Color.Red;
             await Task.Delay(500);
             lblResult.BackColor = SystemColors.Control;
+        }
+        private async void TimerBlinkRed()
+        {
+            lbTimer.BackColor = Color.Red;
+            await Task.Delay(100);
+            lbTimer.BackColor = SystemColors.Control;
+        }
+
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            lbTimer.Text = (sec--).ToString() + "s";
+            if (sec < 10)
+            {
+                BlinkLabelRed();
+            }
+            if (sec <= -1)
+            {
+                timer1.Stop();
+                GameOver();
+            }
         }
     }
 }

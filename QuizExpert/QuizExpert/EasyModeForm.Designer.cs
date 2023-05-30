@@ -122,9 +122,9 @@
             Controls.Add(button1);
             Controls.Add(lblQuestion);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "EasyModeForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "QuizExpert - Easy Mode";
             ResumeLayout(false);
         }
 

@@ -23,7 +23,11 @@ namespace QuizExpert
         public void SendResult()
         {
             string res = "";
-            if(correctAnswers/numberQuestions > 0.9)
+            if (correctAnswers/numberQuestions == 1)
+            {
+                res += "You are QuizExpert! You scored 100%";
+            }
+            else if(correctAnswers/numberQuestions > 0.9)
             {
                 res += "Congratulations! You scored over 90%!";
             }

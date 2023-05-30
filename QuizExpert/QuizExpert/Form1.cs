@@ -38,6 +38,13 @@ namespace QuizExpert
             mediumModeForm.Show();
             this.Hide();
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            playClickSound();
+            Form hardModeForm = new HardModeForm();
+            hardModeForm.Show();
+            this.Hide();
+        }
         public async void playClickSound()
         {
             string path = Path.Combine(Environment.CurrentDirectory, "Sounds", "clickSound.wav");
@@ -56,8 +63,9 @@ namespace QuizExpert
         }
         private void InitializeHelpProvider()
         {
-            helpProvider1.SetHelpString(button1, "10 questions without timer");
-            helpProvider1.SetHelpString(button2, "10 questions with timer");
+            helpProvider1.SetHelpString(button1, "10 прашања со неограничено време");
+            helpProvider1.SetHelpString(button2, "10 прашања со ограничено време од 30 секунди");
+            helpProvider1.SetHelpString(button3, "10 прашања со ограничено време од 15 секунди, негативни поени, секој точен поен носи плус 3 секунди, а за секој погрешен се губат 3 секунди");
         }
 
         private void InitializeToolTip()
@@ -65,6 +73,9 @@ namespace QuizExpert
             toolTip = new System.Windows.Forms.ToolTip();
             toolTip.SetToolTip(button1, helpProvider1.GetHelpString(button1));
             toolTip.SetToolTip(button2, helpProvider1.GetHelpString(button2));
+            toolTip.SetToolTip(button3, helpProvider1.GetHelpString(button3));
         }
+
+
     }
 }
