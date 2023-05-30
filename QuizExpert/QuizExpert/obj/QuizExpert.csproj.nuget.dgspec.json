@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\damch\\OneDrive\\Desktop\\QuizExpert\\QuizExpert\\QuizExpert\\QuizExpert.csproj": {}
+    "C:\\Users\\misko\\OneDrive\\Desktop\\QuizExpertCommunity\\QuizExpert\\QuizExpert\\QuizExpert.csproj": {}
   },
   "projects": {
-    "C:\\Users\\damch\\OneDrive\\Desktop\\QuizExpert\\QuizExpert\\QuizExpert\\QuizExpert.csproj": {
+    "C:\\Users\\misko\\OneDrive\\Desktop\\QuizExpertCommunity\\QuizExpert\\QuizExpert\\QuizExpert.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\damch\\OneDrive\\Desktop\\QuizExpert\\QuizExpert\\QuizExpert\\QuizExpert.csproj",
+        "projectUniqueName": "C:\\Users\\misko\\OneDrive\\Desktop\\QuizExpertCommunity\\QuizExpert\\QuizExpert\\QuizExpert.csproj",
         "projectName": "QuizExpert",
-        "projectPath": "C:\\Users\\damch\\OneDrive\\Desktop\\QuizExpert\\QuizExpert\\QuizExpert\\QuizExpert.csproj",
-        "packagesPath": "C:\\Users\\damch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\damch\\OneDrive\\Desktop\\QuizExpert\\QuizExpert\\QuizExpert\\obj\\",
+        "projectPath": "C:\\Users\\misko\\OneDrive\\Desktop\\QuizExpertCommunity\\QuizExpert\\QuizExpert\\QuizExpert.csproj",
+        "packagesPath": "C:\\Users\\misko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\misko\\OneDrive\\Desktop\\QuizExpertCommunity\\QuizExpert\\QuizExpert\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\damch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\misko\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

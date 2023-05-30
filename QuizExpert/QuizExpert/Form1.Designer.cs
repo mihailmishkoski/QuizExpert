@@ -56,6 +56,7 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             button1.MouseEnter += playHoverSound;
+            button1.MouseHover += playHoverSound;
             // 
             // button2
             // 
@@ -68,6 +69,7 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             button2.MouseEnter += playHoverSound;
+            button2.MouseHover += playHoverSound;
             // 
             // button3
             // 
@@ -79,6 +81,8 @@
             button3.Text = "Тешко";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
+            button3.MouseEnter += playHoverSound;
+            button3.MouseHover += playHoverSound;
             // 
             // Form1
             // 
